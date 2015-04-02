@@ -3,6 +3,7 @@ package messagereader;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.List;
 import java.util.Scanner;
 
 
@@ -10,6 +11,7 @@ import java.util.Scanner;
 public class BackEnd {
 	private String filename;
 	private String plaintext;
+	private List<String> inputs;
 	
 	public BackEnd(String filename){
 		
@@ -23,7 +25,11 @@ public class BackEnd {
 		catch(FileNotFoundException e){
 			e.printStackTrace();
 		}
-		
+		while(in.hasNext()){
+			String input = in.nextLine();
+			inputs.add(input);
+			
+		}
 	}
 
 	
