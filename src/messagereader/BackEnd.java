@@ -2,8 +2,7 @@ package messagereader;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-
-import com.sun.java_cup.internal.runtime.Scanner;
+import java.util.Scanner;
 
 public class BackEnd {
 	private String filename;
@@ -22,6 +21,9 @@ public class BackEnd {
 			e.printStackTrace();
 		}
 		
+		while(in.hasNext()){
+			
+		}
 	}
 
 	
