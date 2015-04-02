@@ -2,8 +2,9 @@ package messagereader;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.Scanner;
 
-import com.sun.java_cup.internal.runtime.Scanner;
+
 
 public class BackEnd {
 	private String filename;
