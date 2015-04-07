@@ -22,11 +22,9 @@ public class BackEnd {
 	
 	public BackEnd(String filename){
 		fn = filename;
-		//sc = new Scanner(fn);
 		try {
 			pw = new PrintWriter(fn);
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		en = new Encoder(filename);
@@ -58,20 +56,6 @@ public class BackEnd {
 	}
 	
 	
-	/*public void write(String plaintext){
-		Scanner in = null;
-		try{
-		in = new Scanner(new File(filename));
-		}
-		catch(FileNotFoundException e){
-			e.printStackTrace();
-		}
-		while(in.hasNext()){
-			String input = in.nextLine();
-			inputs.add(input);
-			
-		}
-	}*/
 
 	
 }
