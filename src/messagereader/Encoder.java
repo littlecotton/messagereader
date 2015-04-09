@@ -31,7 +31,7 @@ public class Encoder {
 	public void write(String plaintext){
 		Scanner in = null;
 		try{
-		in = new Scanner(new File(filename));
+		in = new Scanner(new File("filename.txt"));
 		}
 		catch(FileNotFoundException e){
 			e.printStackTrace();
