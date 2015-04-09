@@ -24,7 +24,7 @@ public class FrontEnd {
 	public FrontEnd()
 	{
 		if (fileName == null){
-			JFileChooser chooser = new JFileChooser("H:\\CompSci\\Eclipse\\messagereader");
+			JFileChooser chooser = new JFileChooser("../");
 		int x = chooser.showSaveDialog(myFrame);
 		if (x == JFileChooser.APPROVE_OPTION)
 			fileName = chooser.getSelectedFile().getName();
