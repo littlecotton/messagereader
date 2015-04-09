@@ -39,15 +39,16 @@ public class Encoder {
 		catch(IOException e){
 			e.printStackTrace();
 		}
+		String input = "";
 		while(in.hasNext()){
-			String input = in.nextLine();
-			input+=input;
+			input+=in.nextLine();
 		}
 		decrypt(input);
 		input +=plaintext;
 		encrypt(input);
-		writer.write(input);
+		writer.println(input);
 		writer.flush();
+		System.out.println(input);
 	}
 	
 	public String encrypt(String en){
