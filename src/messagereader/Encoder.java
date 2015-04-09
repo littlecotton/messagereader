@@ -2,6 +2,7 @@ package messagereader;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 import java.util.Scanner;
@@ -31,9 +32,11 @@ public class Encoder {
 	public void write(String plaintext){
 		Scanner in = null;
 		try{
-		in = new Scanner(new File("filename.txt"));
+			File file = new File("filename.txt");
+			if (!file.exists()) file.createNewFile();
+		in = new Scanner(file);
 		}
-		catch(FileNotFoundException e){
+		catch(IOException e){
 			e.printStackTrace();
 		}
 		while(in.hasNext()){
@@ -73,6 +76,14 @@ public class Encoder {
 	
 	public List<String> read(){
 		Scanner in = null;
+		try{
+			File file = new File("filename.txt");
+			if (!file.exists()) file.createNewFile();
+		in = new Scanner(file);
+		}
+		catch(IOException e){
+			e.printStackTrace();
+		}
 		try{
 		in = new Scanner(new File(filename));
 		}
