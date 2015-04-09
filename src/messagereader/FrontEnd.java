@@ -87,6 +87,7 @@ public class FrontEnd {
 
 			public void actionPerformed(ActionEvent e) {
 				String name = user.getText();
+				//System.out.println(newMsg.getText());
 				String message = newMsg.getText();
 				b.addMessage(name, message);
 			}});

@@ -36,10 +36,11 @@ public class BackEnd {
 	}
 	
 	public void addMessage(String username, String msg){
-		if(myData.containsKey(username)){
+		if(!(myData.containsKey(username))){
 			myData.put(username, new ArrayList<String>());
 		}
 		List<String> current = myData.get(username);
+		//System.out.println(msg);
 		current.add(msg);
 		myData.put(username, current);
 		for(String x : myData.keySet()){
